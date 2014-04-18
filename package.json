@@ -1,0 +1,31 @@
+{
+    "name": "pickem",
+    "version": "0.0.0",
+    "description": "Service for the pickem application",
+    "main": "index.js",
+    "dependencies": {
+        "express" : "3.5.1",
+        "mongoose" : "3.8.8",
+        "passport" : "0.2.0",
+        "passport-local" : "1.0.0",
+        "connect-flash" : "0.1.1",
+        "bcrypt-nodejs" : "latest",
+        "jwt-simple" : "latest",
+        "passport-http-bearer": ">= 0.0.0",
+        "ejs" : "1.0.0"
+    },
+    "scripts": {
+        "test": "test",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jzehner/pickem.git"
+    },
+    "author": "Josh Zehner",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jzehner/pickem/issues"
+    },
+    "homepage": "https://github.com/jzehner/pickem"
+}

@@ -1,0 +1,47 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>PickEM</title>
+	<% include head.ejs %>
+</head>
+<body>
+<div class="container">
+
+    <% include nav.ejs %>
+	<div class="jumbotron text-left">
+		<h1><%= pagedata.user.username %>'s profile</h1>
+        <hr>
+        <form action="/edit" method="post">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username" value="<%= pagedata.user.username %>" disabled>
+            </div>
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" name="firstname" value="<%= pagedata.user.firstname %>">
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" name="lastname" value="<%= pagedata.user.lastname %>">
+            </div>
+            <div class="form-group">
+                <label>Nickname (displayed on sqaure)</label>
+                <input type="text" class="form-control" name="nickname" value="<%= pagedata.user.nickname %>">
+            </div>
+            <div class="form-group">
+                <label>Cell</label>
+                <input type="text" class="form-control" name="phone" value="<%= pagedata.user.phone %>">
+            </div>
+            <div class="form-group">
+                <label>Allow SMS</label>
+                <input type="checkbox" name="smsenabled" <% if (pagedata.user.smsenabled){ %> checked <% } %> />
+            </div>
+            
+            <button type="submit" class="btn btn-info btn-lg">Save Changes</button>
+        </form>        
+	</div>
+
+</div>
+</body>
+</html>

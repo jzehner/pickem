@@ -1,0 +1,28 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>PickEM</title>
+	<% include head.ejs %>
+    <script src="./javascripts/squares.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <% include nav.ejs %>
+	<div class="jumbotron text-center">
+        <a class="btn btn-default" href='createPool'>Create New Pool</a>
+        <br/>
+        <hr/>
+        <br/>
+        <div class="list-group">
+            <ul class="list-group">
+            <% poolList.forEach(function(el, index) {%>
+                <a class="list-group-item" href="./pool/<%=el._id%>"><%=el.name%> - (<%=el.homeName%> vs. <%=el.visitorName%>)</a> 
+            <%});%>
+            </ul>
+        <div>
+	</div>
+</div>
+</body>
+</html>

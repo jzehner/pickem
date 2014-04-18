@@ -1,0 +1,37 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>PickEM Login</title>
+	<% include head.ejs %>
+</head>
+<body>
+<div class="container">
+
+    <% include nav.ejs %>
+	<div class="jumbotron text-left">
+		<h1><span class="fa fa-sign-in"></span> Login</h1>
+
+        <!-- show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger"><center><span class="fa fa-exclamation-circle"></span> <%= message %></center></div>
+        <% } %>
+
+        <!-- LOGIN FORM -->
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-info btn-lg">Login</button>
+        </form>        
+	</div>
+
+</div>
+</body>
+</html>

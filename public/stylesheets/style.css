@@ -1,0 +1,35 @@
+body {
+    padding: 20px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #1d1d1d;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.squares {
+    border: 5px solid #f3f3f3;
+    background-color: #ffffff; 
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 50px;
+}
+
+.squares td {
+    background-color:#ffffff;
+    border: 5px solid #f3f3f3;
+    height: 75px;
+    width: 100px;
+}
+
+.squares td:hover {
+    background-color: #f0f0f0;   
+}
+
+.squares tr:hover td {
+    ;
+    
+}
+

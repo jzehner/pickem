@@ -1,0 +1,41 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>PickEM Signup</title>
+	<% include head.ejs %>
+</head>
+<body>
+<div class="container">
+
+    <% include nav.ejs %>
+	<div class="jumbotron text-left">
+		<h1><span class="fa fa-pencil"></span> Create Pool</h1>
+
+        <!-- show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger"><center><span class="fa fa-exclamation-circle"></span> <%= message %></center></div>
+        <% } %>
+
+        
+        <form action="/createPool" method="post">
+            <div class="form-group">
+                <label>Pool Name</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label>Home Team</label>
+                <input type="text" class="form-control" name="hometeam">
+            </div>
+            <div class="form-group">
+                <label>Visitor Team</label>
+                <input type="text" class="form-control" name="visitorteam">
+            </div>
+
+            <button type="submit" class="btn btn-info btn-lg">Create</button>
+        </form>        
+	</div>
+
+</div>
+</body>
+</html>
